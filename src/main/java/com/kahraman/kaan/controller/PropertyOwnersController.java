@@ -4,11 +4,10 @@ import com.kahraman.kaan.entity.PropertyOwners;
 import com.kahraman.kaan.service.PropertyOwnersService;
 import lombok.Data;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @RestController
 @Data
 @RequestMapping("/propertyOwners")

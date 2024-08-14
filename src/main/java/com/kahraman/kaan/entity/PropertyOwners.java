@@ -1,9 +1,6 @@
 package com.kahraman.kaan.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -14,6 +11,8 @@ import java.io.Serializable;
 public class PropertyOwners implements Serializable {
 
     @Id
+    @SequenceGenerator(name = "seq_property_owners",initialValue = 1,allocationSize = 1)
+    @GeneratedValue(generator = "seq_property_owners",strategy = GenerationType.SEQUENCE)
     @Column(name = "Id")
     private Long id;
 

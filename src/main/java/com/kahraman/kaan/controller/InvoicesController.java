@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.lang.annotation.Repeatable;
 import java.util.List;
-
+@CrossOrigin
 @RestController
 @Data
 @RequestMapping("/invoices")

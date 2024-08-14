@@ -11,6 +11,8 @@ import java.util.Date;
 @Table(name = "Contract")
 public class Contract  implements Serializable {
     @Id
+    @SequenceGenerator(name = "seq_contract",initialValue = 1,allocationSize = 1)
+    @GeneratedValue(generator = "seq_contract",strategy = GenerationType.SEQUENCE)
     @Column(name = "Id")
     private Long id;
 

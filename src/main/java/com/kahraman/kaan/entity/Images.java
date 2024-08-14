@@ -1,10 +1,7 @@
 package com.kahraman.kaan.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -15,6 +12,8 @@ import java.io.Serializable;
 public class Images implements Serializable {
 
     @Id
+    @SequenceGenerator(name = "seq_images",initialValue = 1,allocationSize = 1)
+    @GeneratedValue(generator = "seq_images",strategy = GenerationType.SEQUENCE)
     @Column(name = "Id")
     private Long id;
 
