@@ -4,10 +4,11 @@ import com.kahraman.kaan.entity.Attachments;
 import com.kahraman.kaan.service.AttachmentsService;
 import lombok.Data;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/attachments")
 @Data
@@ -21,7 +22,7 @@ public class AttachmentsController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Attachments> create(@RequestBody Attachments attachments){
+    public ResponseEntity<Attachments> createAttachments(@RequestBody Attachments attachments){
         Attachments result = attachmentsService.creatAttachments(attachments);
         return ResponseEntity.ok(result);
     }

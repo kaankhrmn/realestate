@@ -13,6 +13,8 @@ import java.util.Date;
 
 public class Expenses implements Serializable {
     @Id
+    @SequenceGenerator(name = "seq_expenses",initialValue = 1,allocationSize = 1)
+    @GeneratedValue(generator = "seq_expenses",strategy = GenerationType.SEQUENCE)
     @Column(name = "Id")
     private Long id;
 

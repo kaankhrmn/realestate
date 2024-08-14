@@ -10,6 +10,8 @@ import java.io.Serializable;
 public class Users implements Serializable {
 
     @Id
+    @SequenceGenerator(name = "seq_users",initialValue = 1,allocationSize = 1)
+    @GeneratedValue(generator = "seq_users",strategy = GenerationType.SEQUENCE)
     @Column(name = "Id")
     private Long id;
 

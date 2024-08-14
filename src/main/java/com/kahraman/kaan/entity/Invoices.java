@@ -12,6 +12,8 @@ import java.util.Date;
 
 public class Invoices implements Serializable {
     @Id
+    @SequenceGenerator(name = "seq_invoices",initialValue = 1,allocationSize = 1)
+    @GeneratedValue(generator = "seq_invoices",strategy = GenerationType.SEQUENCE)
     @Column(name = "Id")
     private Long id;
 
